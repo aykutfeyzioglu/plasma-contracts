@@ -30,11 +30,11 @@ module.exports = async (
     ];
     const paymentExitGame = await deployer.deploy(PaymentExitGame, paymentExitGameArgs);
 
-    // register the exit game to framework
-    await plasmaFramework.registerExitGame(
-        PAYMENT_TX_TYPE,
-        paymentExitGame.address,
-        config.frameworks.protocols.moreVp,
-        { from: maintainerAddress },
-    );
+    // // register the exit game to framework
+    // await plasmaFramework.registerExitGame(
+    //     PAYMENT_TX_TYPE,
+    //     paymentExitGame.address,
+    //     config.frameworks.protocols.moreVp,
+    //     { from: maintainerAddress },
+    // );
 };
