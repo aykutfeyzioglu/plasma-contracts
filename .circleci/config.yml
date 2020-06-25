@@ -72,7 +72,7 @@ jobs:
       - setup_truffle_env
       - run:
           name: Run tests
-          command: npm run test
+          command: npm install eth-json-rpc-filters && npm run test
           working_directory: ~/repo/plasma_framework
           environment:
             CI: true
