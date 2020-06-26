@@ -18,6 +18,7 @@ module.exports = async (
 ) => {
     const vault = process.env.VAULT || false;
     // 20_deploy_plasma_framework.js
+    // goes into the enclave
     console.log('Activate Childchain');
     const plasmaFramework = await PlasmaFramework.deployed();
     if (vault) {
