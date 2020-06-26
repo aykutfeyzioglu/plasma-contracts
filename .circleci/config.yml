@@ -16,6 +16,8 @@ commands:
   setup_truffle_env:
     steps:
       - checkout
+      - run: git submodule sync --recursive
+      - run: git submodule update --recursive --init
       - run:
           name: Set up environment
           command: echo 'export PATH="$(npm bin):$PATH"' >> $BASH_ENV
@@ -66,6 +68,7 @@ commands:
             - /usr/local/lib/node_modules
 
 jobs:
+
   Truffle tests:
     executor: truffle_executor
     working_directory: ~/repo
